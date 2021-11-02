@@ -275,17 +275,56 @@ body {
                     .xkbg {
                         width: 501px;
                         height: 791px;
-                        // background: red;
+                        overflow: hidden;
                         position: fixed;
                         z-index: 10;
                         top: 258px;
                         left: 128px;
-                        overflow: hidden;
                         img {
                             position: fixed;
+                            z-index:99;
+                        }
+                        .jietu {
+                            position: absolute;
                             left: 50%;
                             top: 45%;
                             transform: translate(-50%,-50%);
+                        }
+                        .sygz-1text {
+                            top: 300px;
+                            left: 440px;
+                        }
+                        .sygz-2text2 {
+                            top: 287px;
+                            left: 158px;
+                        }
+                        .sygz-2text {
+                            top: 989px;
+                            left: 192px;
+                        }
+                        .sygz-3text {
+                            top: 273px;
+                            left: 141px;
+                        }
+                        .sygz-3text2 {
+                            top: 849px;
+                            left: 225px;
+                        }
+                        .sygz-4text {
+                            top: 833px;
+                            left: 134px;
+                        }
+                        .sygz-4text2 {
+                            top: 936px;
+                            left: 227px;
+                        }
+                        .sygz-5text {
+                            top: 290px;
+                            left: 227px;
+                        }
+                        .sygz-5text2 {
+                            top: 846px;
+                            left: 305px;
                         }
                     }
                     .sygz-xskuang {
@@ -298,42 +337,7 @@ body {
                         left: 350px;
                         z-index: 99;
                     }
-                    .sygz-1text {
-                        top: 300px;
-                        left: 440px;
-                    }
-                    .sygz-2text2 {
-                        top: 287px;
-                        left: 158px;
-                    }
-                    .sygz-2text {
-                        top: 989px;
-                        left: 192px;
-                    }
-                    .sygz-3text {
-                        top: 273px;
-                        left: 141px;
-                    }
-                    .sygz-3text2 {
-                        top: 849px;
-                        left: 225px;
-                    }
-                    .sygz-4text {
-                        top: 833px;
-                        left: 134px;
-                    }
-                    .sygz-4text2 {
-                        top: 936px;
-                        left: 227px;
-                    }
-                    .sygz-5text {
-                        top: 290px;
-                        left: 227px;
-                    }
-                    .sygz-5text2 {
-                        top: 846px;
-                        left: 305px;
-                    }
+                    
                 }
             }
         }
@@ -386,11 +390,12 @@ body {
         .meizhao {
             width: 500px;
             height: 790px;
-            position: fixed;
+            position: absolute;
             border: 2px solid #002d72;
             border-radius: 5px;
             left: 125px;
             top: 254px;
+            overflow: hidden;
         }
     }
     .lay-four {

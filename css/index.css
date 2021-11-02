@@ -275,17 +275,57 @@ body {
 .pageweb .lay-two .ul-one li .huangkuang .xkbg {
   width: 501px;
   height: 791px;
+  overflow: hidden;
   position: fixed;
   z-index: 10;
   top: 258px;
   left: 128px;
-  overflow: hidden;
 }
 .pageweb .lay-two .ul-one li .huangkuang .xkbg img {
   position: fixed;
+  z-index: 99;
+}
+.pageweb .lay-two .ul-one li .huangkuang .xkbg .jietu {
+  position: absolute;
   left: 50%;
   top: 45%;
   transform: translate(-50%, -50%);
+}
+.pageweb .lay-two .ul-one li .huangkuang .xkbg .sygz-1text {
+  top: 300px;
+  left: 440px;
+}
+.pageweb .lay-two .ul-one li .huangkuang .xkbg .sygz-2text2 {
+  top: 287px;
+  left: 158px;
+}
+.pageweb .lay-two .ul-one li .huangkuang .xkbg .sygz-2text {
+  top: 989px;
+  left: 192px;
+}
+.pageweb .lay-two .ul-one li .huangkuang .xkbg .sygz-3text {
+  top: 273px;
+  left: 141px;
+}
+.pageweb .lay-two .ul-one li .huangkuang .xkbg .sygz-3text2 {
+  top: 849px;
+  left: 225px;
+}
+.pageweb .lay-two .ul-one li .huangkuang .xkbg .sygz-4text {
+  top: 833px;
+  left: 134px;
+}
+.pageweb .lay-two .ul-one li .huangkuang .xkbg .sygz-4text2 {
+  top: 936px;
+  left: 227px;
+}
+.pageweb .lay-two .ul-one li .huangkuang .xkbg .sygz-5text {
+  top: 290px;
+  left: 227px;
+}
+.pageweb .lay-two .ul-one li .huangkuang .xkbg .sygz-5text2 {
+  top: 846px;
+  left: 305px;
 }
 .pageweb .lay-two .ul-one li .huangkuang .sygz-xskuang {
   top: 255px;
@@ -296,42 +336,6 @@ body {
   top: 1020px;
   left: 350px;
   z-index: 99;
-}
-.pageweb .lay-two .ul-one li .huangkuang .sygz-1text {
-  top: 300px;
-  left: 440px;
-}
-.pageweb .lay-two .ul-one li .huangkuang .sygz-2text2 {
-  top: 287px;
-  left: 158px;
-}
-.pageweb .lay-two .ul-one li .huangkuang .sygz-2text {
-  top: 989px;
-  left: 192px;
-}
-.pageweb .lay-two .ul-one li .huangkuang .sygz-3text {
-  top: 273px;
-  left: 141px;
-}
-.pageweb .lay-two .ul-one li .huangkuang .sygz-3text2 {
-  top: 849px;
-  left: 225px;
-}
-.pageweb .lay-two .ul-one li .huangkuang .sygz-4text {
-  top: 833px;
-  left: 134px;
-}
-.pageweb .lay-two .ul-one li .huangkuang .sygz-4text2 {
-  top: 936px;
-  left: 227px;
-}
-.pageweb .lay-two .ul-one li .huangkuang .sygz-5text {
-  top: 290px;
-  left: 227px;
-}
-.pageweb .lay-two .ul-one li .huangkuang .sygz-5text2 {
-  top: 846px;
-  left: 305px;
 }
 .pageweb .lay-two .sygz-qrsc {
   top: 1142px;
@@ -377,11 +381,12 @@ body {
 .pageweb .lay-shree .meizhao {
   width: 500px;
   height: 790px;
-  position: fixed;
+  position: absolute;
   border: 2px solid #002d72;
   border-radius: 5px;
   left: 125px;
   top: 254px;
+  overflow: hidden;
 }
 .pageweb .lay-four img {
   position: fixed;

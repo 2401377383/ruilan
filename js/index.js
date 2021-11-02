@@ -1,6 +1,7 @@
 $(function () {
     var layer = layui.layer;
     var form = layui.form;
+    var img = null;
     $('.aiwo').click(function () {
         $('.lay').show();
         $('.anniu').show();
@@ -55,6 +56,7 @@ $(function () {
         $(this).children().first().hide();
         $(this).children().first().next().show();
         $(this).children().first().next().next().show();
+        $(this).addClass('yonglai').siblings().removeClass('yonglai')
         $.each($(this).siblings(), function (i, itm) {
             $(itm).children().first().show();
             $(itm).children().first().next().hide();
@@ -67,37 +69,44 @@ $(function () {
     })
     $('#file').on('change', function () {
         var image = $('#file')[0].files;
-        var fd = new FormData();
-        console.log(image);
+        // var fd = new FormData();
+        // console.log(image);
 
-        fd.append('avatar', image[0]);
-        console.log(fd);
-        $.ajax({
-            type: 'post',
-            url: 'http://www.liulongbin.top:3006/api/upload/avatar',
-            data: fd,
-            contentType: false,
-            processData: false,
-            success: function (res) {
-                console.log('http://www.liulongbin.top:3006' + res.url);
-                var srcs = 'http://www.liulongbin.top:3006' + res.url;
-                $('.xkbg img').attr('src', srcs);
-                $('.meizhao img').attr('src',srcs)
-            }
-        })
+        // fd.append('avatar', image[0]);
+        // console.log(fd);
+        // $.ajax({
+        //     type: 'post',
+        //     url: 'http://www.liulongbin.top:3006/api/upload/avatar',
+        //     data: fd,
+        //     contentType: false,
+        //     processData: false,
+        //     success: function (res) {
+        //         var srcs = 'http://www.liulongbin.top:3006' + res.url;
+        //         $('.xkbg img').attr('src', srcs);
+        //         $('.meizhao img').attr('src',srcs)
+        //     }
+        // })
+        var reader = new FileReader();
+        reader.onload = function () {
+            $('.xkbg .jietu').attr('src', reader.result);
+        }
+        reader.readAsDataURL(image[0]);
+
     });
+
+
     var leftPage = 0;
     var topPage = 0;
     var leftPage1 = 0;
     var topPage1 = 0;
     var leftc = 0;
     var topc = 0;
-    $('.xkbg img').on('touchstart', function (e) {
+    $('.xkbg .jietu').on('touchstart', function (e) {
         leftPage = e.targetTouches[0].clientX;
         topPage = e.targetTouches[0].clientY;
 
-        var l = $('.xkbg img').position().left;
-        var t = $('.xkbg img').position().top;
+        var l = $('.xkbg .jietu').position().left;
+        var t = $('.xkbg .jietu').position().top;
 
         leftc = leftPage - l;
         topc = topPage - t;
@@ -109,13 +118,26 @@ $(function () {
         topPage1 = e.targetTouches[0].clientY;
         var le = $('.xkbg').position().left;
         var to = $('.xkbg').position().top;
-        $('.xkbg img').css({ 'left': leftPage1 - leftc + le + 'px', 'top': topPage1 - topc + to + 'px' })
+        $('.xkbg .jietu').css({ 'left': leftPage1 - leftc + le + 'px', 'top': topPage1 - topc + to + 'px' })
     });
 
     $('.sygz-qrsc').click(function () {
 
         var image = $('#file')[0].files;
         if (image.length > 0) {
+            html2canvas(document.querySelector('.yonglai .xkbg'), {
+                useCORS: true,
+            }).then((canvas) => {
+                // img = new Image();
+                // img.src = canvas.toDataURL("image/png");
+                // console.log(img.src);
+                // var reader = new FileReader();
+                // reader.onload = function () {
+                //     $('.meizhao img').attr('src', reader.result);
+                // }
+                // reader.readAsDataURL(canvas);
+                $('.meizhao').html(canvas)
+            });
             $('.lay-shree').show();
             $('.lay-two').hide();
         } else {
@@ -164,13 +186,14 @@ $(function () {
     }
     var htmlStr = template('tpl-four', data);
     $('.lay-ul').html(htmlStr);
+
     $('body').on('click', '.dz img', function () {
-            $(this).hide().siblings().show();
+        $(this).hide().siblings().show();
     })
-    $('.woyeyaowan').click(function(){
+    $('.woyeyaowan').click(function () {
         $('.lay-four').hide();
     })
-    $('.paihangbang').click(function(){
+    $('.paihangbang').click(function () {
         $('.lay-four').show();
         $('.lay-shree').hide();
     })
