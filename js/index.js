@@ -155,7 +155,7 @@ $(function () {
     });
 
     $('.cahnganbaocun').click(function() {
-        $('.meizhao img').ontouchstart()
+        $('.meizhao a').click()
     })
     data = {
         arr: [
