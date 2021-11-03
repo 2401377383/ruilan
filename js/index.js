@@ -136,7 +136,16 @@ $(function () {
                 //     $('.meizhao img').attr('src', reader.result);
                 // }
                 // reader.readAsDataURL(canvas);
-                $('.meizhao').html(canvas)
+                $('.meizhao img').attr('src',canvas.toDataURL("image/png"))
+                // $('.meizhao').html(canvas)
+
+                // convertCanvasToImage()
+                // function convertCanvasToImage(canvas) {
+                //     var image = new Image();
+                //     image.src = canvas.toDataURL("image/png");
+                //     console.log(image);
+                //     return image;
+                // }
             });
             $('.lay-shree').show();
             $('.lay-two').hide();
@@ -144,6 +153,10 @@ $(function () {
             return layer.msg('请上传图片');
         }
     });
+
+    $('.cahnganbaocun').click(function() {
+        $('.meizhao img').ontouchstart()
+    })
     data = {
         arr: [
             {
