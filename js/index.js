@@ -136,7 +136,7 @@ $(function () {
                 //     $('.meizhao img').attr('src', reader.result);
                 // }
                 // reader.readAsDataURL(canvas);
-                $('.meizhao img').attr('src',canvas.toDataURL("image/png"))
+                $('.meizhao img').attr('src', canvas.toDataURL("image/png"))
                 // $('.meizhao').html(canvas)
 
                 // convertCanvasToImage()
@@ -154,7 +154,7 @@ $(function () {
         }
     });
 
-    $('.cahnganbaocun').click(function() {
+    $('.cahnganbaocun').click(function () {
         $('.meizhao a').click()
     })
     data = {
@@ -210,4 +210,44 @@ $(function () {
         $('.lay-four').show();
         $('.lay-shree').hide();
     })
+
+    $('.dax').click(function () {
+        $('.lay-five').show();
+        $('.lay-five .lay-tc').show();
+    })
+    $('.lay-five .fanhui').click(function(){
+        $('.lay-five').hide();
+        $('.lay-five .lay-tc').hide();
+    })
+    $('.lay-five .lay-x').click(function(){
+        $('.lay-five .lay-tc').hide()
+    })
+    $('.lay-five .button-qd').click(function(){
+        $('.lay-five').hide();
+        $('.lay-five .lay-tc').hide();
+        $('.lay-six').show();
+        var num = Math.ceil(Math.random()*6);
+        $('.lay-six .qizhi').attr('src',`img/2/qizhi${num}.png`);
+    })
+    $('.lay-six .fanhui').click(function(){
+        $('.lay-six').hide();
+    })
+    $('.guanzhu').click(function(){
+        $('.lay-six').hide();
+        $('.lay-seven').show();
+    })
+    $('.lay-seven .fanhui').click(function(){
+        $('.lay-seven').hide();
+    })
+    // 百度地图API功能
+	var map = new BMap.Map("allmap");    // 创建Map实例
+	map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+	//添加地图类型控件
+	map.addControl(new BMap.MapTypeControl({
+		mapTypes:[
+            BMAP_NORMAL_MAP,
+            BMAP_HYBRID_MAP
+        ]}));	  
+	map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
 })

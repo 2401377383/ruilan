@@ -462,6 +462,212 @@ body {
             left: 205px;
         }
     }
+    .lay-five {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        img {
+            position: fixed;
+        }
+        .banner {
+            left: 0;
+            top: 0;
+            height: 100%;
+        }
+        .wdmldxt {
+            top: 30px;
+            left: 375px;
+            animation: swing 3s infinite;
+        }
+        .ren {
+            top: 35px;
+            left: 100px;
+        }
+        .sidai {
+            animation: backInRight .8s;
+        }
+        .xx {
+            top: 131px;
+            left: 72px;
+            animation: 1s flash infinite;
+        }
+        .bq1 {
+            top: 600px;
+            left: 40px;
+        }
+        .bq2 {
+            top: 490px;
+            left: 404px;
+        }
+        .bq3 {
+            top: 845px;
+            left: 47px;
+        }
+        .bq4 {
+            top: 759px;
+            left: 405px;
+        }
+        .bqtext {
+            top: 1100px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .button-qd {
+            top: 1160px;
+            left: 200px;
+        }
+        .fanhui {
+            left: 650px;
+            top: 20px;
+        }
+        .lay-tc {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .3);
+            position: fixed;
+        }
+        .lay-tc1 {
+            top: 510px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .lay-x {
+            top: 528px;
+            left: 585px;
+        }
+        .lat-bt {
+            top: 803px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .lay-six {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        img {
+            position: fixed;
+        }
+        .banner2 {
+            left: 0;
+            top: 0;
+            height: 100%;
+        }
+        .xx2 {
+            top: 30px;
+            left: 40px;
+            animation: 1s flash infinite;
+        }
+        .fanhui {
+            left: 650px;
+            top: 20px;
+        }
+        .qizhi {
+            top: 160px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .guanzhu {
+            top: 1055px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .fujin {
+            top: 1140px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .lay-seven {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        img {
+            position: fixed;
+        }
+        .banner3 {
+            left: 0;
+            top: 0;
+            height: 100%;
+        }
+        .xx3 {
+            top: 273px;
+            left: 111px;
+            animation: 1s flash infinite;
+        }
+        .fanhui {
+            left: 650px;
+            top: 20px;
+        }
+        .ax1 {
+            top: 800px;
+            left: 498px;
+        }
+        .ax2 {
+            top: 900px;
+            left: 478px;
+        }
+        .ax3 {
+            top: 160px;
+        }
+        .shouquan {
+            top: 1206px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        input {
+            position: fixed;
+            top: 81px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 420px;
+            height: 55px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            font-family: '楷体';
+            color: #002d72;
+            border: 1px solid transparent;
+            &::-webkit-input-placeholder {
+                color: #002d72;
+            }
+            &::-moz-input-placeholder {
+                color: #002d72;
+            }
+            &::-ms-input-placeholder {
+                color: #002d72;
+            }
+        }
+        .input {
+            top: 81px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .select1 {
+            top: 165px;
+            left: 95px;
+        }
+        .select2 {
+            top: 165px;
+            left: 287px;
+        }
+        .select3 {
+            top: 165px;
+            left: 476px;
+        }
+        #allmap {
+            position: fixed;
+            width: 470px;
+            left: 470px;
+            top: 440px;
+        }
+    }
 }
 @keyframes backInDown {
     0% {
@@ -599,4 +805,36 @@ body {
     animation-name: pulse;
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
+  }
+  @keyframes swing {
+    20% {
+      -webkit-transform: rotate3d(0, 0, 1, 15deg);
+      transform: rotate3d(0, 0, 1, 15deg);
+    }
+  
+    40% {
+      -webkit-transform: rotate3d(0, 0, 1, -10deg);
+      transform: rotate3d(0, 0, 1, -10deg);
+    }
+  
+    60% {
+      -webkit-transform: rotate3d(0, 0, 1, 5deg);
+      transform: rotate3d(0, 0, 1, 5deg);
+    }
+  
+    80% {
+      -webkit-transform: rotate3d(0, 0, 1, -5deg);
+      transform: rotate3d(0, 0, 1, -5deg);
+    }
+  
+    to {
+      -webkit-transform: rotate3d(0, 0, 1, 0deg);
+      transform: rotate3d(0, 0, 1, 0deg);
+    }
+  }
+  .animate__swing {
+    -webkit-transform-origin: top center;
+    transform-origin: top center;
+    -webkit-animation-name: swing;
+    animation-name: swing;
   }
